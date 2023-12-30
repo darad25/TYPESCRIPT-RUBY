@@ -20,6 +20,7 @@ def rand()
     (1..units_in_classroom).each do |unit|
       tubes_in_unit = tubes_per_unit
       hours_left = 0
+      tubes_failed = 0
   
       (1..days_per_week * weeks_per_year * months_per_year).each do |day|
         (1..tubes_in_unit).each do |_tube|
@@ -31,9 +32,10 @@ def rand()
         end
   
         # If 2 tubes failed, replace all 4 tubes in the unit
-        if tubes_in_unit <= tubes_per_unit - 2
+        if tubes_failed <= tubes_per_unit - 2
           total_tubes += tubes_in_unit
           tubes_in_unit = tubes_per_unit
+          tubes_failed = 0
         end
       end
     end

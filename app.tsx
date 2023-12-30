@@ -35,6 +35,7 @@ function rand(): number {
         if (tubesFailed <= tubesPerUnit - 2) {
           totalTubes += tubesInUnit;
           tubesInUnit = tubesPerUnit;
+          tubesFailed = 0;
         }
       }
     }
