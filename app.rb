@@ -29,6 +29,7 @@ def rand()
             total_tubes += 1
             tubes_in_unit -= 1
             hours_left = rand()
+            tubes_failed += 1
           else
             hours_left -= 1
           end

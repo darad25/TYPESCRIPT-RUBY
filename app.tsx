@@ -29,6 +29,7 @@ function rand(): number {
             totalTubes++;
             tubesInUnit--;
             hoursLeft = rand();
+            tubesFailed += 1
           } else {
             hoursLeft--;
           }
