@@ -25,6 +25,9 @@ def rand()
       (1..days_per_week * weeks_per_year * months_per_year).each do |day|
         (1..tubes_in_unit).each do |_tube|
           if hours_left <= 0
+           # Fluorescent tube failed, replace it
+            total_tubes += 1
+            tubes_in_unit -= 1
             hours_left = rand()
           else
             hours_left -= 1

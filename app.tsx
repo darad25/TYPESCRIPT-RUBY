@@ -25,6 +25,9 @@ function rand(): number {
       for (let day = 1; day <= daysPerWeek * weeksPerYear * monthsPerYear; day++) {
         for (let tube = 1; tube <= tubesInUnit; tube++) {
           if (hoursLeft <= 0) { 
+            // Fluorescent tube failed, replace it
+            totalTubes++;
+            tubesInUnit--;
             hoursLeft = rand();
           } else {
             hoursLeft--;
