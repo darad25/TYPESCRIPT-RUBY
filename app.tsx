@@ -32,7 +32,7 @@ function rand(): number {
         }
   
         // If 2 tubes failed, replace all 4 tubes in the unit
-        if (tubesFailed <= tubesPerUnit - 2) {
+        if (tubesFailed >= 2) {
           totalTubes += tubesInUnit;
           tubesInUnit = tubesPerUnit;
           tubesFailed = 0;

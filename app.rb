@@ -32,7 +32,7 @@ def rand()
         end
   
         # If 2 tubes failed, replace all 4 tubes in the unit
-        if tubes_failed <= tubes_per_unit - 2
+        if tubes_failed >= 2
           total_tubes += tubes_in_unit
           tubes_in_unit = tubes_per_unit
           tubes_failed = 0
